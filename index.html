@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="cssfiles/main.css">
+    <link rel="stylesheet" href="cssfiles/custom.css">
+    <link rel="stylesheet" href="mainfile/css.css">
+    <link rel="stylesheet" href="mainfile/devsite-firebase-blue.css">
+    <link rel="stylesheet" href="mainfile/firebase-site.css">
+    <link rel="search" type="application/opensearchdescription+xml"
+        href="https://firebase.google.com/s/opensearch.xml?authuser=0" data-tooltip-align="b,c" data-tooltip="Firebase"
+        aria-label="Firebase" data-title="Firebase">
+    <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="jsfiles/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" async="" src="mainfile/analytics.js"></script>
+    <script>
+        var a = window.devsite || {};
+        window.devsite = a;
+        a.readyCallbacks = [];
+        window.devsite.readyCallbacks = a.readyCallbacks;
+        a.ready = function (b) {
+            a.readyCallbacks.push(b)
+        };
+        window.devsite.ready = a.ready;
+    </script>
+    <script src="mainfile/jquery-bundle.js" gapi_processed="true"></script>
+    <script>
+        var ___gcfg = ___gcfg || {};
+        ___gcfg.lang = 'en';
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style rel="stylesheet">
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+        .respo {
+            --duration: .5s;
+            --easing: ease-in-out;
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            display: none;
+        }
+
+        .respo ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .respo li {
+            margin: -4px 0 0 0;
+        }
+
+        .respo a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+
+        .respo a:hover {
+            background: #efefef;
+        }
+
+        .respo .sub-menu a {
+            font-size: .9em;
+            color: #666666;
+            border-left: 2em solid white;
+            padding: .75em;
+            background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+        }
+
+        .respo .sub-menu a:hover {
+            background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+        }
+
+        .respo header {
+            font-weight: 600;
+            display: block;
+            background: rgba(255, 255, 255, 0.5);
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+
+        .respo header span {
+            border: none;
+            background: transparent;
+            font-size: 1.5em;
+            padding: 0;
+            cursor: pointer;
+            line-height: 1;
+            float: right;
+        }
+
+        .respo footer button {
+            position: absolute;
+            top: 0;
+            left: 1%;
+            border: none;
+            padding: calc(1em - 2px);
+            width: 100%;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing);
+            transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+            cursor: pointer;
+            outline: none;
+            background-color: black;
+            opacity: 0;
+        }
+
+        .respo.closed a,
+        .respo.closed header {
+            transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+            transition-delay: var(--delay-in);
+            color: transparent;
+        }
+
+        .respo.closed footer button {
+            transition-delay: 0s;
+            transform: scaleY(0.7) scaleX(0.2);
+            width: 100%;
+            background-color: black;
+            color: #000;
+        }
+
+        @media screen and (max-width: 720px) {
+            .respo {
+                display: block;
+                --duration: .5s;
+                --easing: ease-in-out;
+                position: relative;
+                width: 200px;
+                margin: 20px;
+            }
+
+            .devsite-top-logo-row-wrapper {
+                background-color: rgba(3, 155, 229, 1);
+                height: 70px;
+            }
+
+            .devsite-top-logo-row devsite-full-site-width {
+                left: -4%;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .col-sm-4 {
+                -webkit-transform: translate(28px, 0);
+                -moz-transform: translate(28px, 0);
+                -ms-transform: translate(28px, 0);
+                -o-transform: translate(28px, 0);
+                transform: translate(28px, 0);
+            }
+
+            .col-sm-5 {
+                -webkit-transform: translate(28px, 0);
+                -moz-transform: translate(28px, 0);
+                -ms-transform: translate(28px, 0);
+                -o-transform: translate(28px, 0);
+                transform: translate(28px, 0);
+            }
+        }
+
+        blink {
+            animation: 1s linear infinite condemned_blink_effect;
+            color: red;
+        }
+
+        @keyframes condemned_blink_effect {
+            0% {
+                visibility: hidden;
+            }
+
+            10% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: visible;
+            }
+        }
+    </style>
+    <title>intCSD-2023</title>
+    <link rel="stylesheet" type="text/css" href="mainfile/docs.css">
+</head>
+
+<body class="devsite-doc-page devsite-dark-code no-touch" data-family="endorsed" id="top_of_page">
+    <div class="devsite-wrapper">
+        <div class="devsite-top-section-wrapper">
+            <header class="devsite-top-section nocontent">
+                <!-- <div id="beg"></div> -->
+                <!-- <div class="top-Heading">
+                    intCSD-2023
+                </div> -->
+                <div style="background-color: white; text-align:left"><img width="20%" src="images/intcsd.jpeg"
+                        alt=""></div>
+                <!-- <h2 style="background-color: white;">intCSD-2023</h2>         -->
+                <div class="devsite-collapsible-section">
+                    <div class="devsite-header-background devsite-full-site-width">
+                        <div class="devsite-doc-set-nav-row devsite-full-site-width">
+                            <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                                <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"
+                                    style="min-width: 686px; left: 0px;">
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="index.html"
+                                            class="devsite-doc-set-nav-active devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            aria-label="Guides, selected" data-category="Site-Wide Custom Events"
+                                            data-label="Tab: Guides">
+                                            HOME
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="aboutus.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                            About us
+                                        </a>
+                                    </li>
+
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="gallery.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                            Gallery
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="how_to_reach.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                            How to reach
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="places_to_visit.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Samples">
+                                            Places to visit
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                                <button type="button"
+                                    class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-forward devsite-hidden"
+                                    aria-label="Scroll tabs"></button>
+                                <button type="button"
+                                    class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-back devsite-hidden"
+                                    aria-label="Scroll tabs"></button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <script>
+                if (window.jQuery) {
+                    $(document).ready(function () {
+                        if (window.devsite && window.devsite.search) {
+
+                            window.devsite.search.init('en')
+                        }
+                    });
+                }
+            </script>
+        </div>
+        <div id="gc-wrapper" itemscope="">
+
+            <div class="devsite-site-mask"></div>
+
+            <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0" style="left: -239px;">
+
+                <div class="devsite-nav-responsive-tabs-panel devsite-nav-responsive-transition devsite-nav-responsive-transform"
+                    style="display: none;">
+                </div>
+                <div class="devsite-nav-responsive-sidebar-panel" style="display: block;">
+
+                    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+
+                    <nav class="devsite-nav-responsive-sidebar">
+
+                    </nav>
+                </div>
+            </nav>
+
+
+            <div class="devsite-main-content clearfix">
+                <!----------------------------------heading-content-of-conference---------------------------------------->
+
+                <div id="heading-of-comsys"></div>
+                <script src="jsfiles/heading-loader-v4.js"></script>
+
+
+                <nav class="devsite-page-nav devsite-nav"
+                    style="position: relative; left: auto; max-height: 679px; top: 0px;">
+                    <ul class="devsite-page-nav-list">
+                    </ul>
+                </nav>
+
+
+                <article class="devsite-article">
+                    <article class="devsite-article-inner">
+
+                        <script>
+                            $(document).ready(function () {
+                                devsite.ratings.init(
+                                    document.querySelectorAll('#devsite-feedback-project'), false
+                                );
+                            });
+                        </script>
+                        <div>
+                            <h1 itemprop="name" class="devsite-page-title" style="text-align: center; color:#0099ff">
+                                intCSD-2023
+                            </h1>
+
+                            <div class="devsite-article-body clearfix" itemprop="articleBody"><br>
+
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="images/HomePage/1.jpg"
+                                                alt="Los Angeles" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="images/HomePage/2.jpg" alt="Chicago"
+                                                style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="images/HomePage/3.jpg"
+                                                alt="New york" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="images/HomePage/4.jpg"
+                                                alt="New york" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="images/HomePage/5.jpg"
+                                                alt="Taj Mahal" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="images/HomePage/6.jpg" alt="India Gate" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="images/HomePage/7.jpg" alt="Rashtrapati Bhavan"
+                                                style="width:100%;">
+                                        </div>
+                                    </div>
+
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                                <br>
+                                <h2 id="About_conference">
+                                    <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                        data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                        data-title="Back to top" ></a><span style="color:#0099ff" class="underline-custom"> About Conference
+                                    </span>
+                                </h2>
+
+                                <div>
+                                    <p style="text-align: justify">The 1st International Conference on Intelligent
+                                        Computing for Sustainable Development (intCSD-2022) will be held on 9 - 10 feb
+                                        2023 at Chandigarh College of Engineering and Technology (Degree wing), Panjab
+                                        University to be organized by the Department of Computer Science and
+                                        Engineering. The main objective of intCSD-2022 is to present the latest research
+                                        and results of scientists with a theme “Intelligent Computing for Sustainable
+                                        Development”. This conference provides opportunities for the delegates from
+                                        different areas to exchange new ideas and application experiences face to face,
+                                        to establish academic or research collaborations. It will bring together the
+                                        researchers from academia and industry onto a common platform and help them to
+                                        develop a comprehensive understanding of the challenges of technological
+                                        advancements from different viewpoints. This conference also will help in
+                                        fostering a healthy and vibrant relationship between academia and industry.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        This conference offers a unique international platform for a wide range of
+                                        professions including scholar's researcher, academician, industry professionals
+                                        and other technology enthusiastic peoples to discuss, present and exchange their
+                                        knowledge and experience to give more reliable and efficient solutions with the
+                                        help of intelligent computing for sustainable development. It also helps to
+                                        explore the various intelligent computing technologies which leads to minimizing
+                                        human effort and cost by giving the sustainable development in different fields.
+                                        This conference invites researchers to contribute original research articles,
+                                        innovative ideas, theory, methodologies. Reviews and other emerging
+                                        designs/proposals that will seek the continuing efforts to understand the novel
+                                        techniques that lead to future improvements and Recent advancements in
+                                        Intelligent Computing for Sustainable Development.
+
+                                    </p>
+                                </div>
+
+
+
+                                <h2 id="major_focus">
+                                    <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                        data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                        data-title="Back to top"></a><span class="underline-custom">Tracks of intCSD-2023 </span>
+                                </h2>
+
+                                <ul>
+                                    <li>
+                                        <span class="focus_areas">Intelligent Computation and Applications</span>
+                                        <br>
+                                        <p style="text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deleniti ab, quod quisquam laborum itaque libero! Placeat repudiandae, autem hic blanditiis reiciendis quia magnam facere perspiciatis.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="focus_areas">Artificial Intelligence</span>
+                                        <br>
+                                        <p style="text-align: justify">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eveniet ducimus inventore officia ratione repellendus dignissimos quasi nulla. Rem aliquid temporibus ea minima suscipit, corporis consectetur ad mollitia corrupti! Numquam.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="focus_areas"> Control Theory and Application</span>
+                                        <br>
+                                        <p style="text-align: justify">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque molestias odio facilis, repellendus fuga ut, dicta debitis ea, asperiores fugit nam totam deleniti unde commodi id sed? Atque odit quibusdam, est magni ad corporis assumenda!
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="focus_areas">Intelligence Big Data Technology and Applications</span>
+                                        <br>
+                                        <p style="text-align: justify">
+                                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam corrupti repudiandae atque labore, inventore facilis laudantium placeat delectus velit aperiam perspiciatis possimus. Accusantium, sequi et.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="focus_areas">Automation Engineering</span>
+                                        <br>
+                                        <p style="text-align: justify">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem deleniti exercitationem numquam repellat in cum delectus eos tempore ipsum, iste nam beatae voluptates consequuntur similique nihil, officiis neque aliquam dolorem consectetur? Aperiam, similique laborum esse sapiente maiores quidem doloribus tempore?
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <span class="focus_areas">Other Related Computer Science and Application</span>
+                                        <br>
+                                        <p style="text-align: justify">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto voluptas atque animi perferendis eaque nemo libero facere necessitatibus voluptatibus dolores, maxime expedita magnam nobis dicta in veritatis quidem vel incidunt.
+                                        </p>
+                                    </li>
+
+
+                                </ul><br>
+
+                                <h2 id="important_d">
+                                    <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                        data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                        data-title="Back to top"></a><span class="underline-custom"> Important Dates
+                                    </span>
+                                </h2>
+
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Paper Submission Opens</td>
+                                            <td>July 15, 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Submission Deadline</td>
+                                            <td>August 20, 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Acceptance Notification </td>
+                                            <td>November 25, 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Registration Due</td>
+                                            <td>December 25, 2022</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camera-ready Submission </td>
+                                            <td>January 5, 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tutorials </td>
+                                            <td>February 1, 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Presentation Schedule </td>
+                                            <td>February 6, 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Main Session</td>
+                                            <td>December 20-21, 2022</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- <h2 id="major_focus2"><a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                                data-tooltip-align="b,c" data-tooltip="Back to top"
+                                                aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom">Distinguished Speakers  </span> </h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-5">
+                                <img src="com/punam.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            <br>
+                                <br>
+                                <div style="font-size: 23px;" >Punam K. Saha</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;">Professor, Electrical and Computer Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Lowa, United States</div>
+                                <div><a href="https://www.engineering.uiowa.edu/faculty-staff/punam-saha">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <img src="com/poland.jpeg" style="height: 180px; width: 180px; border-radius: 50%">
+                            <br>
+                                <br>
+                                <div style="font-size: 23px;" >Dariusz Plewczynski</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;">Head of  Functional and Structural Genomics Laboratory, Center of New Technologies (CeNT)</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Warsaw, Warsaw, Poland</div>
+                                <div><a href="https://cent.uw.edu.pl/en/person/dr-hab-dariusz-plewczynski-prof-uw/">Profile link</a></div>
+                            </div> 
+                        </div><br> -->
+
+                                <br>
+
+                                <h2 id="reach">
+                                    <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                        data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                        data-title="Back to top"></a><span class="underline-custom">How to reach </span>
+                                </h2>
+                                <div style="width: 100%">
+                                    <!-- <iframe width="100%" height="600" frameborder="0"
+                                        scrolling="no" marginheight="0" marginwidth="0"
+                                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=IIT%20Ropar+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                            href="https://www.gps.ie/truck-gps/">fleet tracking gps</a></iframe> -->
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.687519256555!2d76.8065004651835!3d30.72718394295093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed212e27c319%3A0x491b3277baba3581!2sChandigarh%20College%20Of%20Engineering%20and%20Technology%20Degree%20Wing!5e0!3m2!1sen!2sin!4v1655021607557!5m2!1sen!2sin"
+                                        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                                <br>
+                                <h2 id="nonrr">
+                                    <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                        data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                        data-title="Back to top"></a><span class="underline-custom"> </span>
+                                </h2>
+
+
+
+                            </div>
+                            <script src="ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                    </article>
+                </article>
+
+
+            </div>
+
+
+            <div id="footer-loader"></div>
+            <script src="jsfiles/footer-loader-v3.js"></script>
+
+        </div>
+    </div>
+    <script src="mainfile/script_foot_closure.js"></script>
+    <script src="mainfile/script_foot.js"></script>
+    <script>
+        (function ($) {
+
+            devsite.devsite.Init($, {
+                'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0,
+                'SITE_NAME': 'comsys',
+                'FULL_SITE_SEARCH_ENABLED': 1,
+                'ENABLE_CLOUDTRACK': 0,
+                'VTAGS_ENABLED': 1,
+                'HISTORY_ENABLED': 1,
+                'SIDEBAR_MINI_ENABLED': 0,
+                'VERSION_HASH': '7bb14d2951',
+                'ENABLE_BLOCKED_LINK_TOOLTIP': 0,
+                'ALLOWED_HOSTS': [''],
+                'BLOCK_RSS_FEEDS': 0
+            },
+                '[]', 'en',
+                true, 'kv.sayanbanerjee@gmail.com', {
+                "99a6bd77935176c43993ac6fe3e23dfc": true,
+                "8de7a048f21618359bd37f5ce44be073": false,
+                "098dafe57affddc137df300142652cfd": false,
+                "8e03e230de0bd8a6fe173fdf172e8b3f": true,
+                "cb025a64a50094835616312f4774a53d": true,
+                "51470233c56fc1fde50f00b73c52b216": false,
+                "d169d485cf24243a263783dbe42029b1": true,
+                "700def1a83e356c06c0925afb05de4b0": false,
+                "6749dcb526ce9bde6993550c7d928d24": true
+            }, 'docs/database/index.html',
+                '');
+        })(jQuery);
+
+
+        devsite.localInit = function () {
+
+        };
+    </script>
+    <script src="../code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    </script>
+    <script>
+        var $els = $('.respo a, .respo header');
+        var count = $els.length;
+        var grouplength = Math.ceil(count / 3);
+        var groupNumber = 0;
+        var i = 1;
+        $('.respo').css('--count', count + '');
+        $els.each(function (j) {
+            if (i > grouplength) {
+                groupNumber++;
+                i = 1;
+            }
+            $(this).attr('data-group', groupNumber);
+            i++;
+        });
+
+        $('.respo footer button').on('click', function (e) {
+            e.preventDefault();
+            $els.each(function (j) {
+                $(this).css('--top', $(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+                $(this).css('--delay-in', j * .1 + 's');
+                $(this).css('--delay-out', (count - j) * .1 + 's');
+            });
+            $('.respo').toggleClass('closed');
+            e.stopPropagation();
+        });
+
+        setTimeout(function () {
+            $('.respo footer button').click();
+
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

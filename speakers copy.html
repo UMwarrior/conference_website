@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="gtm_var" data-key="docType" data-value="get-started">
+    <meta name="xsrf_token" content="hwPS_Br40kjiKYMAHpgVuZRKQdyW6epjLDQNXDhjeso6MTU1MjQ4NTM2NTIxMzg5OQ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COMSYS-2022</title>
+    <link rel="icon" type="image/ico" href="com/jgeclogo.ico">
+    <link rel="stylesheet" type="text/css" href="mainfile/docs.css">
+    <link rel="alternate" href="https://firebase.google.cn/docs/database/android/start?hl=id" hreflang="id-cn">
+    <link rel="alternate" href="https://firebase.google.cn/docs/database/android/start?hl=ja" hreflang="ja-cn">
+    <link rel="alternate" href="https://firebase.google.cn/docs/database/android/start?hl=zh-cn" hreflang="zh-Hans-cn">
+    <link rel="alternate" href="https://firebase.google.com/docs/database/android/start" hreflang="x-default">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cssfiles/main.css">
+    <link rel="stylesheet" href="cssfiles/custom.css">
+    <link rel="stylesheet" href="mainfile/css.css">
+    <link rel="stylesheet" href="mainfile/devsite-firebase-blue.css">
+    <link rel="stylesheet" href="mainfile/firebase-site.css">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://firebase.google.com/s/opensearch.xml?authuser=0" data-tooltip-align="b,c" data-tooltip="Firebase" aria-label="Firebase" data-title="Firebase">
+    <script src="https://https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="jsfiles/main.js"></script>
+    <script async="" type="text/javascript" charset="UTF-8" src="mainfile/rsAA2YrTtkihcK8n9cKayGL7_CeDlQGa953Q"></script>
+    <script type="text/javascript" async="" src="mainfile/analytics.js"></script>
+    <script async="" src="mainfile/gtm.js"></script>
+    <script src="mainfile/cbgapi.loaded_0" async=""></script>
+    <script>
+        var a = window.devsite || {};
+        window.devsite = a;
+        a.readyCallbacks = [];
+        window.devsite.readyCallbacks = a.readyCallbacks;
+        a.ready = function(b) {
+            a.readyCallbacks.push(b)
+        };
+        window.devsite.ready = a.ready;
+    </script>
+    <script src="mainfile/jquery-bundle.js" gapi_processed="true"></script>
+    <script>
+        var ___gcfg = ___gcfg || {};
+        ___gcfg.lang = 'en';
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="mainfile/v1V-h5gb9246klVMBw8ekp_fqZj5U2lMW8yS4zzxemE.js"></script>
+    <style rel="stylesheet">
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+        .respo {
+            --duration: .5s;
+            --easing: ease-in-out;
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            display: none;
+        }
+        
+        .respo ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .respo li {
+            margin: -4px 0 0 0;
+        }
+        
+        .respo a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+        
+        .respo a:hover {
+            background: #efefef;
+        }
+        
+        .respo .sub-menu a {
+            font-size: .9em;
+            color: #666666;
+            border-left: 2em solid white;
+            padding: .75em;
+            background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+        }
+        
+        .respo .sub-menu a:hover {
+            background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+        }
+        
+        .respo header {
+            font-weight: 600;
+            display: block;
+            background: rgba(255, 255, 255, 0.5);
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+        
+        .respo header span {
+            border: none;
+            background: transparent;
+            font-size: 1.5em;
+            padding: 0;
+            cursor: pointer;
+            line-height: 1;
+            float: right;
+        }
+        
+        .respo footer button {
+            position: absolute;
+            top: 0;
+            left: 1%;
+            border: none;
+            padding: calc(1em - 2px);
+            width: 100%;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing);
+            transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+            cursor: pointer;
+            outline: none;
+            background-color: black;
+            opacity: 0;
+        }
+        
+        .respo.closed a,
+        .respo.closed header {
+            transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+            transition-delay: var(--delay-in);
+            color: transparent;
+        }
+        
+        .respo.closed footer button {
+            transition-delay: 0s;
+            transform: scaleY(0.7) scaleX(0.2);
+            width: 100%;
+            background-color: black;
+            color: #000;
+        }
+        
+        @media screen and (max-width: 720px) {
+            .respo {
+                display: block;
+                --duration: .5s;
+                --easing: ease-in-out;
+                position: relative;
+                width: 200px;
+                margin: 20px;
+            }
+            .devsite-top-logo-row-wrapper {
+                background-color: rgba(3, 155, 229, 1);
+                height: 70px;
+            }
+            .devsite-top-logo-row devsite-full-site-width {
+                left: -4%;
+            }
+        }
+        
+        @media screen and (max-width: 750px) {
+            .heading-text-9 {
+                display: block;
+                position: absolute;
+                background-color: rgba(1, 53, 137, 0.6);
+                opacity: 1;
+                height: auto;
+                width: 68%;
+                top: 0.7%;
+                left: 4%;
+                -webkit-border-radius: 20px 0 20px 0;
+                -moz-border-radius: 20px 0 20px 0;
+                border-radius: 20px 0 20px 0;
+                padding: 30px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 1.4;
+                font-family: 'sayan';
+            }
+            .col-sm-4 {
+                -webkit-transform: translate(28px, 0);
+                -moz-transform: translate(28px, 0);
+                -ms-transform: translate(28px, 0);
+                -o-transform: translate(28px, 0);
+                transform: translate(28px, 0);
+            }
+            .col-sm-5 {
+                -webkit-transform: translate(28px, 0);
+                -moz-transform: translate(28px, 0);
+                -ms-transform: translate(28px, 0);
+                -o-transform: translate(28px, 0);
+                transform: translate(28px, 0);
+            }
+        }
+    </style>
+</head>
+
+<body class="devsite-doc-page devsite-dark-code no-touch" data-family="endorsed" id="top_of_page">
+    <div class="devsite-wrapper">
+        <div class="devsite-top-section-wrapper">
+            <header class="devsite-top-section nocontent">
+                <!-- <div id="beg"></div> -->
+                <div style="background-color: white; text-align:left"><img width="20%" src="images/intcsd.jpeg"
+                        alt=""></div>
+
+                <div class="devsite-collapsible-section">
+                    <div class="devsite-header-background devsite-full-site-width">
+                        <div class="devsite-doc-set-nav-row devsite-full-site-width">
+                            <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                                <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll" style="min-width: 686px; left: 0px;">
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="index.html" class="devsite-doc-set-nav-active devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" aria-label="Guides, selected" data-category="Site-Wide Custom Events" data-label="Tab: Guides">
+                                        HOME
+                                    </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="aboutus.html" class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                        About us
+                                    </a>
+                                    </li>
+
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="gallery.html" class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                         Gallery
+                                    </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="how_to_reach.html" class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                        How to reach
+                                    </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="places_to_visit.html" class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Samples">
+                                        Places to visit
+                                    </a>
+                                    </li>
+
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="Comsys2020/index.html" class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                            <b>COMSYS 2020</b>
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="Comsys2021/index.html" class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                            <blink>
+                                                <font color="orange"><b>COMSYS 2022</b></font>
+                                            </blink>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                                <button type="button" class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-forward devsite-hidden" aria-label="Scroll tabs"></button>
+                                <button type="button" class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-back devsite-hidden" aria-label="Scroll tabs"></button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        </div>
+        <div id="gc-wrapper" itemscope="">
+
+
+            <div class="devsite-site-mask"></div>
+
+            <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0" style="left: -239px;">
+
+                <div class="devsite-nav-responsive-tabs-panel devsite-nav-responsive-transition devsite-nav-responsive-transform" style="display: none;">
+                </div>
+                <div class="devsite-nav-responsive-sidebar-panel" style="display: block;">
+
+                    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+
+                    <nav class="devsite-nav-responsive-sidebar">
+
+                    </nav>
+                </div>
+            </nav>
+
+
+            <div class="devsite-main-content clearfix">
+
+
+                <div id="heading-of-comsys"></div>
+                <script src="jsfiles/heading-loader-v4.js"></script>
+
+
+                <nav class="devsite-page-nav devsite-nav" style="position: relative; left: auto; max-height: 679px; top: 0px;">
+                    <ul class="devsite-page-nav-list">
+                    </ul>
+                </nav>
+
+
+                <article class="devsite-article">
+                    <article class="devsite-article-inner">
+
+                        <script>
+                            $(document).ready(function() {
+                                devsite.ratings.init(
+                                    document.querySelectorAll('#devsite-feedback-project'), false
+                                );
+                            });
+                        </script>
+
+                        <h1 itemprop="name" class="devsite-page-title">
+                            Committee Members of intCSD-2023
+                        </h1>
+
+
+
+                        <div class="devsite-article-body clearfix
+            " itemprop="articleBody">
+
+
+                            <h2 id="About_conference">
+                                <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a>
+                                <!--<span class="underline-custom"> Chief Patron</span>--></h2>
+
+
+                            <!-- <div class="row">
+                                <div class="col-sm-1">
+
+                                </div>-->
+                            <!-- <div class="col-sm-4 pic">
+                                    <img src="com/rajeevahuja.jpeg" style="height: 180px; width: 180px; border-radius: 50%">
+                                </div>
+                                <div class="col-sm-5" style="line-height: 1.3;">
+                                    <br>
+                                    <div style="font-size: 21px;" > Prof. Rajeev Ahuja</div>
+                                    <div style="font-size: 10px"><br></div>
+                                    <div style="font-size: 17px;">The Director</div>
+                                    <div style="font-size: 10px"><br></div>
+                                    <div>Indian Institute of Technology Ropar, India</div>
+                                    <div><a href="https://www.iitrpr.ac.in/director">Profile link</a></div>
+                                </div>-->
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+                        <h2 id="nan1">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Chief Patron</span>
+                        </h2>
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/rajeev-ahuja.jpeg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Rajeev Ahuja </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Director</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Ropar, India </div>
+                                <div><a href="https://www.iitrpr.ac.in/director">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+
+
+                        <h2 id="nan1">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Patrons</span>
+                        </h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/manoranjanmishra.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Manoranjan Mishra </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Dean</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Ropar, India </div>
+                                <div><a href="https://www.iitrpr.ac.in/mathematics/manoranjan">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+
+                            <div class="col-sm-4 pic">
+                                <img src="com/mita.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Mita Nasipuri</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Department of Computer Science & Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University, Kolkata</div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=651">Profile link</a></div>
+                            </div>
+                        </div>
+
+
+
+
+                        <h2 id="nan2">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom">International Advisory Committee </span></h2>
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/punam.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;">Prof. Punam K. Saha</div>
+                                <div style="font-size: 10px"><br></div>
+                                <!-- <div style="font-size: 19px;">Professor, Electrical and Computer Engineering</div> -->
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Iowa, United States</div>
+                                <div><a href="https://www.engineering.uiowa.edu/faculty-staff/punam-saha">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/BBB_TCAD_Photo.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Prof. Bhargab B. Bhattacharya</div>
+                                <div style="font-size: 10px"><br></div>
+                                <!-- <div style="font-size: 17px;">Distinguished Visiting Professor</div> -->
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology, Kharagpur , West Bengal, India</div>
+                                <div><a href="https://in.linkedin.com/in/bhargab-b-bhattacharya-06530132">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+
+                            <div class="col-sm-5">
+                                <img src="com/isabela.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;">Prof. Isabelle Debled-Renesson</div>
+                                <div style="font-size: 10px"><br></div>
+                                <!-- <div style="font-size: 19px;">Professor, Electrical and Computer Engineering</div> -->
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Lorraine, France</div>
+                                <div><a href="https://members.loria.fr/IDebledRennesson/files/">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Jemal.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Jemal Abawajy </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Deakin University, Australia </div>
+                                <div><a href="https://www.deakin.edu.au/about-deakin/people/jemal-abawajy">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/ondrej.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;"> Prof. Ondrej Krejcar </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Univerzita Hradec Králové, Czech Republic </div>
+                                <div><a href="https://scholar.google.co.in/citations?user=8LphwtYAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/masino.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Massimo Tistarelli </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Sassari, Italy </div>
+                                <div><a href="https://scholar.google.com/citations?user=DdyCvCgAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/ali.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;"> Prof. Ali Bin Selamat </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Malaysia-Japan International Institute of Technology, Malaysia </div>
+                                <div><a href="https://scholar.google.com/citations?user=dxexQZwAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Gordon.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Gordon Chan </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Alberta, Canada </div>
+                                <div><a href="https://www.researchgate.net/profile/Gordon-Chan-7">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/Naohiro.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;"> Dr. Naohiro Furukawa </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Hitachi R&D, Australia </div>
+                                <div><a href="https://au.linkedin.com/in/%E7%9B%B4%E5%BA%83-%E5%8F%A4%E5%B7%9D-39871a16b/en-us">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Antonio.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Anastasios Koulaouzidis </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Pomeranian Medical University, Poland </div>
+                                <div><a href="https://www.researchgate.net/profile/Anastasios-Koulaouzidis">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/Lipo.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;"> Prof. Lipo Wang </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Nanyang Technological University, Singapore </div>
+                                <div><a href="https://scholar.google.com/citations?user=HUnDXRYAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Andrew.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Andrey S. Krylov </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Moscow Lomonosov State University, Russia </div>
+                                <div><a href="https://scholar.google.com/citations?user=22qstzIAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/Seyedali.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;"> Prof. Seyedali Mirjalili </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Torrens University, Australia </div>
+                                <div><a href="https://scholar.google.com/citations?user=TJHmrREAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Zong.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;"> Prof. Zong Woo Geem </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Gachon University, South Korea </div>
+                                <div><a href="https://scholar.google.co.in/citations?user=Je3-B2YAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="com/Fried.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 23px;"> Prof. Friedhelm Schwenker </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 19px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Ulm, Germany </div>
+                                <div><a href="https://scholar.google.de/citations?user=ie0eT6IAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+                            <!-- <div class="col-sm-5">-->
+                            <!--    <img src="com/Erik.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                            <!--    <br><br>-->
+                            <!--    <div style="font-size: 23px;" > Prof. Erik Valdemar Cuevas Jimenez </div>-->
+                            <!--    <div style="font-size: 10px"><br></div>-->
+                            <!--    <div style="font-size: 19px;"></div>-->
+                            <!--    <div style="font-size: 10px"><br></div>-->
+                            <!--    <div>Universidad de Guadalajara, Mexico </div>-->
+                            <!--    <div><a href="http://www.cucei.udg.mx/doctorados/electronica/es/Erik">Profile link</a></div>-->
+                            <!--</div>-->
+
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <!--<div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/mita.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                          
+                                <br><br>
+                                <div style="font-size: 21px;" > Mita Nasipuri</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Professor of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University , Jadavpur , West Bengal</div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=651">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/isabela.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                          
+                                <br><br>
+                                <div style="font-size: 21px;" > Isabelle Debled-Rennesson</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Professor of Computer Science at IUT Charlemagne , University of Lorraine , Nancy<br>
+									Head of the ADAGIo team of LORIA </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>LORIA, ADAGIo Team, Scientific Campus, BP 239, 54506 Vandoeuvre-lès-Nancy Cedex</div>
+                                <div><a href="https://members.loria.fr/IDebledRennesson/files/">Profile link</a></div>
+                            </div>
+                        </div> -->
+
+                        <h2 id="nan3">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> General Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/debotosh.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;"> Prof. Debotosh Bhattacharjee</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Department of Computer Science & Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University , Jadavpur , West Bengal</div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=672">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/poland.jpeg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;"> Prof. Dariusz Plewczynski</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Head of Functional and Structural Genomics Laboratory, Center of New Technologies (CeNT)</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Warsaw, Warsaw, Poland</div>
+                                <div><a href="https://cent.uw.edu.pl/en/person/dr-hab-dariusz-plewczynski-prof-uw/">Profile link</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/sudipmishra.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;"> Prof. Sudip Misra</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Department of Computer Science & Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Kharagpur, India </div>
+                                <div><a href="https://cse.iitkgp.ac.in/~smisra/">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+
+                        </div>
+
+                        <h2 id="nan99">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Organizing Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/dipak.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Prof. Dipak Kumar Kole</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Dept. of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jalpaiguri Government Engineering College, Jalpaiguri , West Bengal</div>
+                                <div><a href="http://jgec.ac.in/php/showfacde.php?id=1">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/sujata.png" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <br>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <div style="font-size: 21px;">Dr. Sujata Pal</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Department of Computer Science and Engineering </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology, Ropar</div>
+                                <div><a href="https://cse.iitrpr.ac.in/dr-sujata-pal">Profile link</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+
+                        </div>
+
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/abhinavdhall.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <br>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <div style="font-size: 21px;">Dr. Abhinav Dhall</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Department of Computer Science and Engineering </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology, Ropar</div>
+                                <div><a href="https://www.iitrpr.ac.in/cse/abhinavdhall">Profile link</a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+
+                        </div>
+                        <!--</div>-->
+                        <br><br>
+                        <!--<div class="row">-->
+                        <!--<div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-4 pic">-->
+                        <!--        <img src="com/abhinavdhall.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+
+                        <!--         <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--        <br>-->
+                        <!--        <div style="font-size: 21px;" >Dr. Abhinav Dhall</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;"> Department of Computer Science and Engineering </div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>Indian Institute of Technology, Ropar</div>-->
+                        <!--        <div><a href="https://www.iitrpr.ac.in/cse/abhinavdhall">Profile link</a></div>-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <br><br>
+
+                        <!--<h2 id="nan6"><a href="#top_of_page"-->
+                        <!--                 class="devsite-back-to-top-link material-icons"-->
+                        <!--                 data-tooltip-align="b,c" data-tooltip="Back to top"-->
+                        <!--                 aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom">Co-organizing Chair </span></h2>-->
+                        <!--<div class="row">-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-5 pic">-->
+                        <!--        <img src="com/binong.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--        <br><br>-->
+                        <!--        <div style="font-size: 21px;" > Dr.Juwesh Binong</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;">Department of Electronics and Communication Engineering</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>NEHU, Shillong</div>-->
+                        <!--        <div><a href="https://nehu.ac.in/faculty/display/320/Dr-Juwesh-Binong">Profile link</a></div>-->
+                        <!--    </div>-->
+
+                        <!--  <div class="col-sm-5 pic">
+                                <img src="com/dhiman.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;" > Dhiman Mondal</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Department of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jalpaiguri Government Engineering College, Jalpaiguri, West Bengal</div>
+                                <div><a href="http://jgec.ac.in/php/showfacde.php?id=14">Profile link</a></div>
+                            </div> -->
+
+                        <!--</div>-->
+
+                        <h2 id="nan4">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Program Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/ram.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;">Dr. Ram Sarkar</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Computer science And Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University , Jadavpur , West Bengal</div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=686">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Auluck-Nitin.jpeg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;">Dr. Nitin Auluck</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Computer Science And Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Ropar, India</div>
+                                <div><a href="https://sites.google.com/iitrpr.ac.in/nauluck">Profile link</a></div>
+                            </div>
+
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/jackeksroka.gif" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;">Dr. Jacek Sroka </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Computer science And Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Warsaw, Poland </div>
+                                <div><a href="https://www.researchgate.net/profile/Jacek-Sroka-2">Profile link</a></div>
+                            </div>
+                        </div>
+
+                        <h2 id="nan5">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Track Chairs </span></h2>
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/pawankrsingh.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br><br>
+                                <div style="font-size: 21px;">Dr. Pawan Kumar Singh </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Track Chairs:AI, ML and Data Science Track</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University , Jadavpur , West Bengal</div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=1151">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/ak.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Anup Kumar Halder </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Track Chairs: AI, ML and Data Science Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Warsaw University of Technology, Poland </div>
+                                <div><a href="https://scholar.google.co.in/citations?user=J2v1BgsAAAAJ&hl=en">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/koninikapaul.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Koninika Paul </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Track Chairs: AI, ML and Data Science Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Palakkad, India </div>
+                                <div><a href="https://iitpkd.ac.in/people/kpal">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/sayan.png" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Sayan Chatterjee </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Devices, Circuits and Systems Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University, kolkata, India </div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=685">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/subhajitroy.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Shubhajit Roy Chowdhury </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Devices, Circuits and Systems Track</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Mandi, Himachal Pradesh </div>
+                                <div><a href="http://faculty.iitmandi.ac.in/~src/">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/sangeetsaha.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Sangeet Saha</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Devices, Circuits and Systems Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Huddersfield, UK </div>
+                                <div><a href="https://pure.hud.ac.uk/en/persons/sangeet-saha">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/ayan.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Ayan Seal</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Track Chairs: Computational Biology, Biomedical Informatics and Network Medicine Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Information Technology, Design and Manufacturing Jabalpur </div>
+                                <div><a href="http://cse.iiitdmj.ac.in/faculty_page.php?id=ayan@iiitdmj.ac.in">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/sayantari.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Sayantari Ghosh</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Computational Biology, Biomedical Informatics and Network Medicine Track</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>NIT Durgapur, India </div>
+                                <div><a href="https://nitdgp.ac.in/department/physics/faculty-14/sayantari-ghosh">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/Gordon.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Gordon Chan</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Computational Biology, Biomedical Informatics and Network Medicine Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Alberta, Edmonton, Canada </div>
+                                <div><a href="https://www.researchgate.net/profile/Gordon-Chan-7">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/sanchari.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Sanchari Das </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Security and Privacy Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>University of Denver, Colorado, USA </div>
+                                <div><a href="https://www.drsancharidas.com/">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/manaskhatua.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Manas Khatua </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Communication Networks, Cloud computing and IoT Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Guwahati, India </div>
+                                <div><a href="https://www.iitg.ac.in/cse/internet-pages/manaskhatua">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/ss1.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Sujoy Saha </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Communication Networks, Cloud computing and IoT Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>National Institute of Technology Durgapur, West Bengal, India </div>
+                                <div><a href="https://www.nitdgp.ac.in/department/computer-science-engineering/faculty-1/sujoy-saha-1">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/AR.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Arijit Roy </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Communication Networks, Cloud computing and IoT Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Information Technology, Sri City </div>
+                                <div><a href="https://www.arijitroy.info">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Ashis_Bera.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Asish Bera </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Image, Video and Signal Processing Track</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>BITS Pilani, India </div>
+                                <div><a href="https://www.bits-pilani.ac.in/pilani/asishbera/profile">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/somitra.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Prof. Somitra Kr. Sanadhya </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Security and Privacy Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Jodhpur, India </div>
+                                <div><a href="http://sites.google.com/view/somitra">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/Malay.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Malay Kule </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Security and Privacy Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>IIEST Shibpur, West Bengal, India </div>
+                                <div><a href="https://www.iiests.ac.in/IIEST/Faculty/cs-malay">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <!--<div class="row">-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-5 pic">-->
+                        <!--        <img src="com/somitra.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--        <br>-->
+                        <!--        <br>-->
+                        <!--        <div style="font-size: 21px;" >Dr. Somitra Kr. Sanadhya  </div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;">Security and Privacy Track div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>Indian Institute of Technology Jodhpur, India  </div>-->
+                        <!--        <div><a href="https://iitj.irins.org/profile/194990">Profile link</a></div>-->
+                        <!--    </div>-->
+
+                        <!--    <div class="col-sm-5 pic">-->
+                        <!--        <img src="com/Malay.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--        <br>-->
+                        <!--        <br>-->
+                        <!--        <div style="font-size: 21px;" >Dr. Malay Kule  </div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;">Security and Privacy Track </div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>IIEST Shibpur, West Bengal, India  </div>-->
+                        <!--        <div><a href="https://www.iiests.ac.in/IIEST/Faculty/cs-malay">Profile link</a></div>-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--</div>-->
+
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/joanna.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Joanna Jaworek-Korjakowska </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Image, Video and Signal Processing Track </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>AGH University of Science and Technology, Krakow, Poland </div>
+                                <div><a href="https://scholar.google.com/citations?user=IsGx9_AAAAAJ&hl=pl">Profile link</a></div>
+                            </div>
+
+                            <div class="col-sm-5 pic">
+                                <img src="com/somnathdey.webp" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;">Dr. Somnath Dey </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Image, Video and Signal Processing Track</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Indore, India </div>
+                                <div><a href="https://somnathd.wixsite.com/somnath">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+
+                        <h2 id="nan7">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Publication Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/nilanjan.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+
+                                <br><br>
+                                <div style="font-size: 21px;">Dr. Nilanjan Dey</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Dept. of Information Technology</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>JIS University, Kolkata , India</div>
+                                <div><a href="https://sites.google.com/view/drnilanjandey/home">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-5 pic">
+                                <img src="com/sbasu.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+
+                                <br><br>
+                                <div style="font-size: 21px;">Prof. Subhadip Basu </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Dept. of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University, West Bengal, India </div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=683 ">Profile link</a></div>
+                            </div>
+
+                        </div>
+
+
+
+                        <h2 id="nan8">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Publicity Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/amandal.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Ayan Mondal</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Dept. of Computer Science ans Technology</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology Indore, India </div>
+                                <div><a href="https://www.iiti.ac.in/people/~ayanm/">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br/>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/sm.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Prof. Dilip Kumar S M </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Department of Electronics and Communication Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div> Bangalore University </div>
+                                <div><a href="#">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+                        <br><br/>
+                        <!--<div class="row">-->
+                        <!--     <div class="col-sm-1">-->
+
+                        <!--     </div>-->
+                        <!--     <div class="col-sm-4 pic">-->
+                        <!--         <img src="com/ayatullah.jfif" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--     </div>-->
+                        <!--     <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--         <br>-->
+                        <!--         <div style="font-size: 21px;" >Dr. Ayatullah Faruk Mollah</div>-->
+                        <!--         <div style="font-size: 10px"><br></div>-->
+                        <!--         <div style="font-size: 17px;">Dept. of Computer Science ans Technology</div>-->
+                        <!--         <div style="font-size: 10px"><br></div>-->
+                        <!--         <div>Aliah University, India</div>-->
+                        <!--         <div><a href="https://aliah.ac.in/department/people-details.php?key=computer-science-and-engineering&id=103">Profile link</a></div>-->
+                        <!--     </div>-->
+                        <!--     <div class="col-sm-1">-->
+
+                        <!--     </div>-->
+                        <!-- </div>-->
+
+
+                        <h2 id="nan13">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Web Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="com/Apurba.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Apurba Sarkar </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Department of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Engineering Science and Technology (IIEST), Shibpur</div>
+                                <div><a href="https://www.iiests.ac.in/IIEST/Faculty/cs-apurba">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="com/akmaji.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Arnab Kumar Maji </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> Department of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>North-Eastern Hill University, Shillong, India </div>
+                                <div><a href="https://nehu.ac.in/faculty/display/22/Dr-A-K-Maji">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="com/shieshendu das.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Shirshendu Das </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div> Indian Institute of Technology Ropar, India </div>
+                                <div><a href="https://sites.google.com/view/shirshendudas/home">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+
+
+                        <h2 id="nan13">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Tutorial Chair </span></h2>
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="com/nibaran.JPG" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Prof. Nibaran Das </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Department of Computer Science and Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jadavpur University, West Bengal, India</div>
+                                <div><a href="http://www.jaduniv.edu.in/profile.php?uid=685">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="com/Kolman.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Christian Kollman </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"> </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Medical University of Vienna, Austria </div>
+                                <div><a href="https://www.meduniwien.ac.at/web/forschung/researcher-profiles/researcher-profiles/detail/?res=christian_kollmann&cHash=fadbdbd0aed58934b9436496cc95242d">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+                        <!--<h2 id="nan9"><a href="#top_of_page"-->
+                        <!--                    class="devsite-back-to-top-link material-icons"-->
+                        <!--                    data-tooltip-align="b,c" data-tooltip="Back to top"-->
+                        <!--                    aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Industrial Chair </span></h2>-->
+
+
+                        <!--<div class="row">-->
+                        <!--        <div class="col-sm-1">-->
+
+                        <!--        </div>-->
+                        <!--        <div class="col-sm-4">-->
+                        <!--            <img src="com/nb.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--        </div>-->
+                        <!--        <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--            <div style="font-size: 21px;" >Dr. Nipanka Bora</div>-->
+                        <!--            <div style="font-size: 10px"><br></div>-->
+                        <!--            <div style="font-size: 17px;">Department of Electronics and Communication Engineering</div>-->
+                        <!--            <div style="font-size: 10px"><br></div>-->
+                        <!--            <div> NEHU, Shillong</div>-->
+                        <!--            <div><a href="https://nehu.ac.in/faculty/display/326/Mr-Nipanka-Bora">Profile link</a></div>-->
+                        <!--        </div>-->
+                        <!--        <div class="col-sm-1">-->
+
+                        <!--        </div>-->
+                        <!--</div>-->
+
+
+                        <!--
+                            <div class="col-sm-5 pic">
+                                <img src="com/jogen.jfif" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;" >Partha Das Chowdhury</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Head, Block chain Centre of Excellence</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>VARA Group, Part of Kanoria Foundation</div>
+                                <div><a href="com/Report.pdf">Profile link</a></div>
+                                <div></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div> 
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="id.svg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;" >  Partha Das Chowdhury </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                            -->
+
+
+
+                        <!--      <h2 id="nan18"><a href="#top_of_page"
+                                          class="devsite-back-to-top-link material-icons"
+                                          data-tooltip-align="b,c" data-tooltip="Back to top"
+                                          aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Competition Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/ayatullah.jfif" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;" > Ayatullah Faruk Mollah </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Assistant Professor, Department of CSE</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Aliah University , West Bengal</div>
+                                <div><a href="https://aliah.ac.in/department/people-details.php?key=computer-science-and-engineering&id=103">Profile link</a></div>
+                                <div></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>  -->
+
+                        <!--     <h2 id="nan19"><a href="#top_of_page"
+                                          class="devsite-back-to-top-link material-icons"
+                                          data-tooltip-align="b,c" data-tooltip="Back to top"
+                                          aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Research Forum and Poster Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/jogendar.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;" > Jogender Saini </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Scintific Officer</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Variable Energy Cyclotron Centre (vecc)
+                                    Kolkata Area, India</div>
+                               
+                                <div></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div> -->
+
+                        <!--<h2 id="nan10"><a href="#top_of_page"-->
+                        <!--                  class="devsite-back-to-top-link material-icons"-->
+                        <!--                  data-tooltip-align="b,c" data-tooltip="Back to top"-->
+                        <!--                  aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Sponsorship Chair </span></h2>-->
+
+
+                        <!--<div class="row">-->
+                        <!--     <div class="col-sm-1">-->
+
+                        <!--     </div>-->
+                        <!--     <div class="col-sm-5 pic">-->
+                        <!--         <img src="com/aa.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--     </div>-->
+                        <!--     <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--         <div style="font-size: 21px;" >Asif Ahmed</div>-->
+                        <!--         <div style="font-size: 10px"><br></div>-->
+                        <!--         <div style="font-size: 17px;">Department of Electronics and Communication Engineering</div>-->
+                        <!--         <div style="font-size: 10px"><br></div>-->
+                        <!--         <div>NEHU, Shillong</div>-->
+                        <!--          <div><a href="https://nehu.ac.in/faculty/display/324/Mr-Asif-Ahmed">Profile link</a></div>-->
+                        <!--     </div>-->
+                        <!--     <div class="col-sm-1">-->
+
+                        <!--     </div>-->
+                        <!--</div>-->
+
+
+                        <!--
+                            <div class="col-sm-5 pic">
+                                <img src="com/nimai.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                                <br>
+                                <br>
+                                <div style="font-size: 21px;" >Nimai Mukhopadhaya</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Head Of Training and Placement Department</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jalpaiguri Government Engineering College , <br>West Bengal</div>
+                                <div><a href="https://jgec.ac.in/php/showfacde.php?id=52">Profile link</a></div>
+                                <div></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>-->
+
+
+                        <!-- <h2 id="nan11"><a href="#top_of_page"
+                                         class="devsite-back-to-top-link material-icons"
+                                         data-tooltip-align="b,c" data-tooltip="Back to top"
+                                         aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Startup Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/vikram.jpeg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;" > Vikramkumar Pudi</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Assistant Professor, Department of Electrical Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Indian Institute of Technology, Tirupati</div>
+                                <div><a href="https://iittp.ac.in/dr-vikramkumar-pudi">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div> -->
+
+
+
+
+                        <h2 id="nan14">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons" data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Finance  Chair </span></h2>
+
+
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/swagata.png" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Swagata Mandal </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;">Dept. of Electronics And Communication Engineering</div>
+                                <div style="font-size: 10px"><br></div>
+                                <div>Jalpaiguri Government Engineering College , West Bengal</div>
+                                <div><a href="https://jgec.ac.in/php/showfacde.php?id=61">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-sm-1">
+
+                            </div>
+                            <div class="col-sm-4 pic">
+                                <img src="com/sudeeptamishra.jpg" style="height: 180px; width: 180px; border-radius: 50%">
+                            </div>
+                            <div class="col-sm-5" style="line-height: 1.3;">
+                                <br>
+                                <div style="font-size: 21px;">Dr. Sudeepta Mishra </div>
+                                <div style="font-size: 10px"><br></div>
+                                <div style="font-size: 17px;"></div>
+                                <div style="font-size: 10px"><br></div>
+                                <div> Indian Institute of Technology Ropar, India </div>
+                                <div><a href="https://cse.iitrpr.ac.in/sudeepta">Profile link</a></div>
+                            </div>
+                            <div class="col-sm-1">
+
+                            </div>
+                        </div>
+
+
+                        <!--<h2 id="nan15"><a href="#top_of_page"-->
+                        <!--                  class="devsite-back-to-top-link material-icons"-->
+                        <!--                  data-tooltip-align="b,c" data-tooltip="Back to top"-->
+                        <!--                  aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Registration Chair </span></h2>-->
+
+
+                        <!--<div class="row">-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-4 pic">-->
+                        <!--        <img src="com/sc.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--        <br>-->
+                        <!--        <div style="font-size: 21px;" >Dr. Subhash Chandra Arya </div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;">Department of Electronics and Communication Engineering</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>NEHU, Shillong </div>-->
+                        <!--        <div><a href="https://nehu.ac.in/faculty/display/316/Dr-Subhash-C-Arya">Profile link</a></div>-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--</div> -->
+
+                        <!--<br><br>-->
+
+                        <!--<h2 id="nan15"><a href="#top_of_page"-->
+                        <!--                  class="devsite-back-to-top-link material-icons"-->
+                        <!--                  data-tooltip-align="b,c" data-tooltip="Back to top"-->
+                        <!--                  aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Special Session Chair </span></h2>-->
+
+                        <!--<div class="row">-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-4 pic">-->
+                        <!--        <img src="com/sk.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--        <br>-->
+                        <!--        <div style="font-size: 21px;" >Dr. Sushanta Kabir Dutta </div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;">Department of Electronics and Communication Engineering</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>NEHU, Shillong </div>-->
+                        <!--        <div><a href="https://nehu.ac.in/faculty/display/318/Dr-Sushanta-Kabir-Dutta">Profile link</a></div>-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--</div> -->
+
+                        <!--<br><br>-->
+
+                        <!--<h2 id="nan15"><a href="#top_of_page"-->
+                        <!--                  class="devsite-back-to-top-link material-icons"-->
+                        <!--                  data-tooltip-align="b,c" data-tooltip="Back to top"-->
+                        <!--                  aria-label="Back to top" data-title="Back to top"></a><span class="underline-custom"> Accommodation Chair </span></h2>-->
+
+
+                        <!--<div class="row">-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-4 pic">-->
+                        <!--        <img src="com/js.jpg" style="height: 180px; width: 180px; border-radius: 50%">-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-5" style="line-height: 1.3;">-->
+                        <!--        <br>-->
+                        <!--        <div style="font-size: 21px;" >Dr. Jaydeep Swarnakar</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div style="font-size: 17px;"> Department of Electronics and Communication Engineering</div>-->
+                        <!--        <div style="font-size: 10px"><br></div>-->
+                        <!--        <div>NEHU, Shillong </div>-->
+                        <!--        <div><a href="https://nehu.ac.in/faculty/display/323/Mr-Jaydeep-Swarnakar">Profile link</a></div>-->
+                        <!--    </div>-->
+                        <!--    <div class="col-sm-1">-->
+
+                        <!--    </div>-->
+                        <!--</div> -->
+
+                        <!--<br><br>-->
+
+
+            </div>
+
+            </article>
+            </article>
+
+
+        </div>
+
+
+        <div id="footer-loader"></div>
+        <script src="jsfiles/footer-loader-v3.js"></script>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            new devsite.feedback.Widget({
+                    'product_id': '719752',
+                    'bucket': '',
+                    'context': '',
+                    'version': 'devsite-20180311-r00-rc00.default'
+                },
+                document.querySelectorAll('.devsite-feedback-button'),
+                'en',
+                document.querySelector('.devsite-site-mask'),
+                document.querySelector('.devsite-feedback-dialog'),
+                document.querySelector('.devsite-feedback-cancel'),
+                document.querySelectorAll('.devsite-feedback-item a:not([href])')
+            );
+        });
+    </script>
+    </div>
+    <script async="" defer="defer" src="mainfile/api.js"></script>
+    <script src="mainfile/a"></script>
+    <script src="mainfile/script_foot_closure.js"></script>
+    <script src="mainfile/script_foot.js"></script>
+    <script>
+        (function($) {
+
+            devsite.devsite.Init($, {
+                    'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0,
+                    'SITE_NAME': 'comsys',
+                    'FULL_SITE_SEARCH_ENABLED': 1,
+                    'ENABLE_CLOUDTRACK': 0,
+                    'VTAGS_ENABLED': 1,
+                    'HISTORY_ENABLED': 1,
+                    'SIDEBAR_MINI_ENABLED': 0,
+                    'VERSION_HASH': '7bb14d2951',
+                    'ENABLE_BLOCKED_LINK_TOOLTIP': 0,
+                    'ALLOWED_HOSTS': [''],
+                    'BLOCK_RSS_FEEDS': 0
+                },
+                '[]', 'en',
+                true, 'kv.sayanbanerjee@gmail.com', {
+                    "99a6bd77935176c43993ac6fe3e23dfc": true,
+                    "8de7a048f21618359bd37f5ce44be073": false,
+                    "098dafe57affddc137df300142652cfd": false,
+                    "8e03e230de0bd8a6fe173fdf172e8b3f": true,
+                    "cb025a64a50094835616312f4774a53d": true,
+                    "51470233c56fc1fde50f00b73c52b216": false,
+                    "d169d485cf24243a263783dbe42029b1": true,
+                    "700def1a83e356c06c0925afb05de4b0": false,
+                    "6749dcb526ce9bde6993550c7d928d24": true
+                }, '/docs/database/',
+                '');
+        })(jQuery);
+
+
+        devsite.localInit = function() {
+
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        var $els = $('.respo a, .respo header');
+        var count = $els.length;
+        var grouplength = Math.ceil(count / 3);
+        var groupNumber = 0;
+        var i = 1;
+        $('.respo').css('--count', count + '');
+        $els.each(function(j) {
+            if (i > grouplength) {
+                groupNumber++;
+                i = 1;
+            }
+            $(this).attr('data-group', groupNumber);
+            i++;
+        });
+
+        $('.respo footer button').on('click', function(e) {
+            e.preventDefault();
+            $els.each(function(j) {
+                $(this).css('--top', $(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+                $(this).css('--delay-in', j * .1 + 's');
+                $(this).css('--delay-out', (count - j) * .1 + 's');
+            });
+            $('.respo').toggleClass('closed');
+            e.stopPropagation();
+        });
+
+        setTimeout(function() {
+            $('.respo footer button').click();
+
+        }, 1000);
+    </script>
+    <script>
+        $('.devsite-utility-footer-language-select').each(function() {
+            $(this).change(function() {
+                $('.devsite-utility-footer-language').submit();
+            });
+        });
+    </script>
+    </div>
+
+
+</body>
+
+</html>
