@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>COMSYS-2021</title>
+    <link rel="icon" type="image/ico" href="com/jgeclogo.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mainfile/css.css">
+    <link rel="stylesheet" href="mainfile/devsite-firebase-blue.css">
+    <link rel="stylesheet" href="mainfile/firebase-site.css">
+    <link rel="search" type="application/opensearchdescription+xml"
+        href="https://firebase.google.com/s/opensearch.xml?authuser=0" data-tooltip-align="b,c" data-tooltip="Firebase"
+        aria-label="Firebase" data-title="Firebase">
+    <link rel="stylesheet" href="cssfiles/main.css">
+    <link rel="stylesheet" href="cssfiles/custom.css">
+    <script src="https://https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="jsfiles/main.js"></script>
+    <script type="text/javascript" async="" src="mainfile/analytics.js"></script>
+    <script>
+        var a = window.devsite || {};
+        window.devsite = a;
+        a.readyCallbacks = [];
+        window.devsite.readyCallbacks = a.readyCallbacks;
+        a.ready = function (b) {
+            a.readyCallbacks.push(b)
+        };
+        window.devsite.ready = a.ready;
+    </script>
+    <script src="mainfile/jquery-bundle.js" gapi_processed="true"></script>
+    <script>
+        var ___gcfg = ___gcfg || {};
+        ___gcfg.lang = 'en';
+    </script>
+    <style rel="stylesheet">
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+        .respo {
+            --duration: .5s;
+            --easing: ease-in-out;
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            display: none;
+        }
+
+        .respo ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .respo li {
+            margin: -4px 0 0 0;
+        }
+
+        .respo a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+
+        .respo a:hover {
+            background: #efefef;
+        }
+
+        .respo .sub-menu a {
+            font-size: .9em;
+            color: #666666;
+            border-left: 2em solid white;
+            padding: .75em;
+            background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+        }
+
+        .respo .sub-menu a:hover {
+            background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+        }
+
+        .respo header {
+            font-weight: 600;
+            display: block;
+            background: rgba(255, 255, 255, 0.5);
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+
+        .respo header span {
+            border: none;
+            background: transparent;
+            font-size: 1.5em;
+            padding: 0;
+            cursor: pointer;
+            line-height: 1;
+            float: right;
+        }
+
+        .respo footer button {
+            position: absolute;
+            top: 0;
+            left: 1%;
+            border: none;
+            padding: calc(1em - 2px);
+            width: 100%;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing);
+            transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+            cursor: pointer;
+            outline: none;
+            background-color: black;
+            opacity: 0;
+        }
+
+        .respo.closed a,
+        .respo.closed header {
+            transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+            transition-delay: var(--delay-in);
+            color: transparent;
+        }
+
+        .respo.closed footer button {
+            transition-delay: 0s;
+            transform: scaleY(0.7) scaleX(0.2);
+            width: 100%;
+            background-color: black;
+            color: #000;
+        }
+
+        @media screen and (max-width: 720px) {
+            .respo {
+                display: block;
+                --duration: .5s;
+                --easing: ease-in-out;
+                position: relative;
+                width: 200px;
+                margin: 20px;
+            }
+
+            .devsite-top-logo-row-wrapper {
+                background-color: rgba(3, 155, 229, 1);
+                height: 70px;
+            }
+
+            .devsite-top-logo-row devsite-full-site-width {
+                left: -4%;
+            }
+        }
+
+        blink {
+            animation: 2s linear infinite condemned_blink_effect;
+            color: red;
+        }
+
+        @keyframes condemned_blink_effect {
+            0% {
+                visibility: hidden;
+            }
+
+            50% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: visible;
+            }
+        }
+    </style>
+    <title>Important Dates</title>
+    <link rel="stylesheet" type="text/css" href="mainfile/docs.css">
+</head>
+
+<body class="devsite-doc-page devsite-dark-code no-touch" data-family="endorsed" id="top_of_page">
+    <div class="devsite-wrapper">
+        <div class="devsite-top-section-wrapper">
+            <header class="devsite-top-section nocontent">
+                <!-- <div id="beg"></div> -->
+                <div style="background-color: white; text-align:left"><img width="20%" src="images/intcsd.jpeg"
+                        alt=""></div>
+
+                <div class="devsite-collapsible-section">
+                    <div class="devsite-header-background devsite-full-site-width">
+                        <div class="devsite-doc-set-nav-row devsite-full-site-width">
+                            <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                                <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"
+                                    style="min-width: 686px; left: 0px;">
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="index.html"
+                                            class="devsite-doc-set-nav-active devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            aria-label="Guides, selected" data-category="Site-Wide Custom Events"
+                                            data-label="Tab: Guides">
+                                            HOME
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="aboutus.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                            About us
+                                        </a>
+                                    </li>
+
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="gallery.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                            Gallery
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="how_to_reach.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                            How to reach
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="places_to_visit.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Samples">
+                                            Places to visit
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                                <button type="button"
+                                    class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-forward devsite-hidden"
+                                    aria-label="Scroll tabs"></button>
+                                <button type="button"
+                                    class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-back devsite-hidden"
+                                    aria-label="Scroll tabs"></button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <script>
+                if (window.jQuery) {
+                    $(document).ready(function () {
+                        if (window.devsite && window.devsite.search) {
+
+                            window.devsite.search.init('en')
+                        }
+                    });
+                }
+            </script>
+        </div>
+        <div id="gc-wrapper" itemscope="">
+
+
+            <div class="devsite-site-mask"></div>
+
+            <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0" style="left: -239px;">
+
+                <div class="devsite-nav-responsive-tabs-panel devsite-nav-responsive-transition devsite-nav-responsive-transform"
+                    style="display: none;">
+                </div>
+                <div class="devsite-nav-responsive-sidebar-panel" style="display: block;">
+
+                    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+
+                    <nav class="devsite-nav-responsive-sidebar">
+
+                    </nav>
+                </div>
+            </nav>
+
+
+            <div class="devsite-main-content clearfix">
+                <!----------------------------------heading-content-of-conference---------------------------------------->
+
+                <div id="heading-of-comsys"></div>
+                <script src="jsfiles/heading-loader-v4.js"></script>
+
+
+                <nav class="devsite-page-nav devsite-nav"
+                    style="position: relative; left: auto; max-height: 679px; top: 0px;">
+                    <ul class="devsite-page-nav-list">
+                    </ul>
+                </nav>
+
+
+                <article class="devsite-article">
+                    <article class="devsite-article-inner">
+
+                        <script>
+                            $(document).ready(function () {
+                                devsite.ratings.init(
+                                    document.querySelectorAll('#devsite-feedback-project'), false
+                                );
+                            });
+                        </script>
+
+
+
+                        <center>
+                            <bold>
+                                <h1 id="important_d">
+                                    <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                        data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                        data-title="Back to top"></a><span style="color:#0099ff" class=""> Important Dates </span>
+                                </h1>
+                            </bold>
+                        </center>
+
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Paper Submission Opens</td>
+                                    <td>July 15, 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Submission Deadline</td>
+                                    <td>August 20, 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Acceptance Notification </td>
+                                    <td>November 25, 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Registration Due</td>
+                                    <td>December 25, 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Camera-ready Submission </td>
+                                    <td>January 5, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Tutorials </td>
+                                    <td>February 1, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Presentation Schedule </td>
+                                    <td>February 6, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Main Session</td>
+                                    <td>December 20-21, 2022</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+
+
+            </div>
+
+
+            </article>
+            </article>
+
+
+        </div>
+
+
+        <div id="footer-loader"></div>
+        <script src="jsfiles/footer-loader-v3.js"></script>
+    </div>
+    <script>
+        $(document).ready(function () {
+            new devsite.feedback.Widget({
+                'product_id': '719752',
+                'bucket': '',
+                'context': '',
+                'version': 'devsite-20190311-r00-rc00.default'
+            },
+                document.querySelectorAll('.devsite-feedback-button'),
+                'en',
+                document.querySelector('.devsite-site-mask'),
+                document.querySelector('.devsite-feedback-dialog'),
+                document.querySelector('.devsite-feedback-cancel'),
+                document.querySelectorAll('.devsite-feedback-item a:not([href])')
+            );
+        });
+    </script>
+    </div>
+    <script src="mainfile/script_foot_closure.js"></script>
+    <script src="mainfile/script_foot.js"></script>
+    <script>
+        (function ($) {
+
+            devsite.devsite.Init($, {
+                'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0,
+                'SITE_NAME': 'comsys',
+                'FULL_SITE_SEARCH_ENABLED': 1,
+                'ENABLE_CLOUDTRACK': 0,
+                'VTAGS_ENABLED': 1,
+                'HISTORY_ENABLED': 1,
+                'SIDEBAR_MINI_ENABLED': 0,
+                'VERSION_HASH': '7bb14d2951',
+                'ENABLE_BLOCKED_LINK_TOOLTIP': 0,
+                'ALLOWED_HOSTS': [''],
+                'BLOCK_RSS_FEEDS': 0
+            },
+                '[]', 'en',
+                true, 'kv.sayanbanerjee@gmail.com', {
+                "99a6bd77935176c43993ac6fe3e23dfc": true,
+                "8de7a048f21618359bd37f5ce44be073": false,
+                "098dafe57affddc137df300142652cfd": false,
+                "8e03e230de0bd8a6fe173fdf172e8b3f": true,
+                "cb025a64a50094835616312f4774a53d": true,
+                "51470233c56fc1fde50f00b73c52b216": false,
+                "d169d485cf24243a263783dbe42029b1": true,
+                "700def1a83e356c06c0925afb05de4b0": false,
+                "6749dcb526ce9bde6993550c7d928d24": true
+            }, '/docs/database/',
+                '');
+        })(jQuery);
+
+
+        devsite.localInit = function () {
+
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        var $els = $('.respo a, .respo header');
+        var count = $els.length;
+        var grouplength = Math.ceil(count / 3);
+        var groupNumber = 0;
+        var i = 1;
+        $('.respo').css('--count', count + '');
+        $els.each(function (j) {
+            if (i > grouplength) {
+                groupNumber++;
+                i = 1;
+            }
+            $(this).attr('data-group', groupNumber);
+            i++;
+        });
+
+        $('.respo footer button').on('click', function (e) {
+            e.preventDefault();
+            $els.each(function (j) {
+                $(this).css('--top', $(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+                $(this).css('--delay-in', j * .1 + 's');
+                $(this).css('--delay-out', (count - j) * .1 + 's');
+            });
+            $('.respo').toggleClass('closed');
+            e.stopPropagation();
+        });
+
+        setTimeout(function () {
+            $('.respo footer button').click();
+
+        }, 1000);
+    </script>
+    <script>
+        $('.devsite-utility-footer-language-select').each(function () {
+            $(this).change(function () {
+                $('.devsite-utility-footer-language').submit();
+            });
+        });
+    </script>
+    </div>
+
+
+</body>
+
+</html>

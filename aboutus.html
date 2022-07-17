@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="cssfiles/main.css">
+    <link rel="stylesheet" href="cssfiles/custom.css">
+    <link rel="stylesheet" href="mainfile/css.css">
+    <link rel="stylesheet" href="mainfile/devsite-firebase-blue.css">
+    <link rel="stylesheet" href="mainfile/firebase-site.css">
+    <link rel="search" type="application/opensearchdescription+xml"
+        href="https://firebase.google.com/s/opensearch.xml?authuser=0" data-tooltip-align="b,c" data-tooltip="Firebase"
+        aria-label="Firebase" data-title="Firebase">
+    <link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="jsfiles/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" async="" src="mainfile/analytics.js"></script>
+    <script>
+        var a = window.devsite || {};
+        window.devsite = a;
+        a.readyCallbacks = [];
+        window.devsite.readyCallbacks = a.readyCallbacks;
+        a.ready = function (b) {
+            a.readyCallbacks.push(b)
+        };
+        window.devsite.ready = a.ready;
+    </script>
+    <script src="mainfile/jquery-bundle.js" gapi_processed="true"></script>
+    <script>
+        var ___gcfg = ___gcfg || {};
+        ___gcfg.lang = 'en';
+    </script>
+    <style rel="stylesheet">
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+        .respo {
+            --duration: .5s;
+            --easing: ease-in-out;
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            display: none;
+        }
+
+        .respo ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .respo li {
+            margin: -4px 0 0 0;
+        }
+
+        .respo a {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+
+        .respo a:hover {
+            background: #efefef;
+        }
+
+        .respo .sub-menu a {
+            font-size: .9em;
+            color: #666666;
+            border-left: 2em solid white;
+            padding: .75em;
+            background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+        }
+
+        .respo .sub-menu a:hover {
+            background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+        }
+
+        .respo header {
+            font-weight: 600;
+            display: block;
+            background: rgba(255, 255, 255, 0.5);
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+            transition-delay: var(--delay-out);
+            border-radius: 4px;
+            padding: 1em 1.52em;
+        }
+
+        .respo header span {
+            border: none;
+            background: transparent;
+            font-size: 1.5em;
+            padding: 0;
+            cursor: pointer;
+            line-height: 1;
+            float: right;
+        }
+
+        .respo footer button {
+            position: absolute;
+            top: 0;
+            left: 1%;
+            border: none;
+            padding: calc(1em - 2px);
+            width: 100%;
+            transform-origin: 0 0;
+            transition: transform var(--duration) var(--easing);
+            transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+            cursor: pointer;
+            outline: none;
+            background-color: black;
+            opacity: 0;
+        }
+
+        .respo.closed a,
+        .respo.closed header {
+            transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+            transition-delay: var(--delay-in);
+            color: transparent;
+        }
+
+        .respo.closed footer button {
+            transition-delay: 0s;
+            transform: scaleY(0.7) scaleX(0.2);
+            width: 100%;
+            background-color: black;
+            color: #000;
+        }
+
+        @media screen and (max-width: 720px) {
+            .respo {
+                display: block;
+                --duration: .5s;
+                --easing: ease-in-out;
+                position: relative;
+                width: 200px;
+                margin: 20px;
+            }
+
+            .devsite-top-logo-row-wrapper {
+                background-color: rgba(3, 155, 229, 1);
+                height: 70px;
+            }
+
+            .devsite-top-logo-row devsite-full-site-width {
+                left: -4%;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .col-sm-4 {
+                -webkit-transform: translate(28px, 0);
+                -moz-transform: translate(28px, 0);
+                -ms-transform: translate(28px, 0);
+                -o-transform: translate(28px, 0);
+                transform: translate(28px, 0);
+            }
+
+            .col-sm-5 {
+                -webkit-transform: translate(28px, 0);
+                -moz-transform: translate(28px, 0);
+                -ms-transform: translate(28px, 0);
+                -o-transform: translate(28px, 0);
+                transform: translate(28px, 0);
+            }
+        }
+
+        blink {
+            animation: 1s linear infinite condemned_blink_effect;
+            color: red;
+        }
+
+        @keyframes condemned_blink_effect {
+            0% {
+                visibility: hidden;
+            }
+
+            10% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: visible;
+            }
+        }
+    </style>
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="mainfile/docs.css">
+</head>
+
+<body class="devsite-doc-page devsite-dark-code no-touch" data-family="endorsed" id="top_of_page">
+    <div class="devsite-wrapper">
+        <div class="devsite-top-section-wrapper">
+            <header class="devsite-top-section nocontent">
+                <!-- <div id="beg"></div> -->
+                <div style="background-color: white; text-align:left"><img width="20%" src="images/intcsd.jpeg"
+                        alt=""></div>
+
+                <div class="devsite-collapsible-section">
+                    <div class="devsite-header-background devsite-full-site-width">
+                        <div class="devsite-doc-set-nav-row devsite-full-site-width">
+                            <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                                <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"
+                                    style="min-width: 686px; left: 0px;">
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="index.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            aria-label="Guides, selected" data-category="Site-Wide Custom Events"
+                                            data-label="Tab: Guides">
+                                            HOME
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="aboutus.html"
+                                            class="devsite-doc-set-nav-active devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                            About us
+                                        </a>
+                                    </li>
+
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="gallery.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+                                            Gallery
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="how_to_reach.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Libraries">
+                                            How to reach
+                                        </a>
+                                    </li>
+                                    <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
+                                        <a href="places_to_visit.html"
+                                            class=" devsite-nav-tab devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+                                            data-category="Site-Wide Custom Events" data-label="Tab: Samples">
+                                            Places to visit
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <button type="button"
+                                    class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-forward devsite-hidden"
+                                    aria-label="Scroll tabs"></button>
+                                <button type="button"
+                                    class="devsite-overflow-tabs-scroll-button devsite-top-button material-icons devsite-scroll-back devsite-hidden"
+                                    aria-label="Scroll tabs"></button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <script>
+                if (window.jQuery) {
+                    $(document).ready(function () {
+                        if (window.devsite && window.devsite.search) {
+
+                            window.devsite.search.init('en')
+                        }
+                    });
+                }
+            </script>
+        </div>
+        <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article"><input class="google-tag-manager-id"
+                type="hidden" value="GTM-N84485">
+            <script>
+                var dataLayer = [{
+                    "freeTrialEligibleUser": "False",
+                    "userCountry": "IN",
+                    "language": {
+                        "requested": "en",
+                        "served": "en"
+                    },
+                    "projectName": "Firebase Realtime Database",
+                    "scriptsafe": null,
+                    "signedIn": "True",
+                    "internalUser": "False"
+                }];
+            </script>
+
+
+            <div class="devsite-site-mask"></div>
+
+            <nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0" style="left: -239px;">
+
+                <div class="devsite-nav-responsive-tabs-panel devsite-nav-responsive-transition devsite-nav-responsive-transform"
+                    style="display: none;">
+                </div>
+                <div class="devsite-nav-responsive-sidebar-panel" style="display: block;">
+
+                    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+
+                    <nav class="devsite-nav-responsive-sidebar">
+
+                    </nav>
+                </div>
+            </nav>
+
+
+            <div class="devsite-main-content clearfix">
+                <!----------------------------------heading-content-of-conference---------------------------------------->
+
+                <div id="heading-of-comsys"></div>
+
+
+                <nav class="devsite-page-nav devsite-nav"
+                    style="position: relative; left: auto; max-height: 679px; top: 0px;">
+                    <ul class="devsite-page-nav-list">
+                    </ul>
+                </nav>
+
+
+                <article class="devsite-article">
+                    <article class="devsite-article-inner">
+
+                        <script>
+                            $(document).ready(function () {
+                                devsite.ratings.init(
+                                    document.querySelectorAll('#devsite-feedback-project'), false
+                                );
+                            });
+                        </script>
+
+                        <h1 id="About_conference">
+                            <a href="#top_of_page" class="devsite-back-to-top-link material-icons"
+                                data-tooltip-align="b,c" data-tooltip="Back to top" aria-label="Back to top"
+                                data-title="Back to top"></a><span class="underline-custom"> About Us </span>
+                        </h1>
+
+
+
+                        <div class="devsite-article-body clearfix" itemprop="articleBody">
+
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <div class="col-md-6 col-xl-6">
+
+
+                                        <div style="text-align: justify; font-size: 17px;">
+                                            <p>
+                                                <b>Chandigarh College of Engineering and Technology (CCET) </b> Degree
+                                                Wing,
+                                                Chandigarh, a government institute under UT Administration, Chandigarh,
+                                                was
+                                                established in 2002. CCET (Degree Wing) has the reputation of
+                                                being one of the premier engineering college for imparting quality
+                                                education in
+                                                Engineering & Technology which is located in the city beautiful sector
+                                                -26,
+                                                Chandigarh. CCET (Degree Wing), Chandigarh, is affiliated to
+                                                Panjab University (PU), Sector 14, Chandigarh and approved by All India
+                                                Council
+                                                for Technical Education (AICTE), Ministry of HRD, Government, of India,
+                                                New
+                                                Delhi.
+                                                <br>
+
+                                                <br>CCET is well known for its huge infrastructure and state of the art
+                                                facilities. It is also known as Green Campus because it has a unique
+                                                environment
+                                                friendly & energy efficient building with fabulous architecture,
+                                                lush verdant woods and landscape gardens that provide an idyllic
+                                                academic
+                                                environment to our students. CCET offers B.E. (Bachelor of Engineering)
+                                                courses
+                                                in four streams i.e. . Electronics &Communication Engineering,
+                                                Computer Science & Engineering, Mechanical Engineering and Civil
+                                                Engineering.
+                                                The college campus extends over an area of 32 acres (130,000 m2) of land
+                                                situated close to the Shivalik ranges and Sukhna Lake. The campus
+                                                is divided into zones like administration blocks for Degree and Diploma
+                                                stream,
+                                                and hostels and residential complex for faculty and staff. In addition
+                                                to
+                                                lecture halls, tutorial rooms and drawing halls, the college
+                                                has an auditorium, library, computer centers, workshops, laboratories
+                                                and
+                                                playgrounds. The college has a branch of State Bank of Patiala with ATM
+                                                facility, extension counter of Post Office and a canteen. The campus
+                                                has a unit of the National Cadet Corps (NCC).
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5 col-xl-5" >
+                                        <div style="width: 40%; margin: auto;">
+                                            <img src="images/AboutUs/2.png" style="width: 100%; margin:auto;" alt="">
+                                        </div>
+                                        <br>
+                                        <div style="text-align: center; width: 40%; margin: auto;">
+                                            <a href="https://www.ccet.ac.in" target="_blank">College Website</a>
+                                        </div>
+                                        <br><br>
+                                        <div style="width: 80%; margin: auto;">
+                                            <img src="images/AboutUs/1.jpeg" style="width: 100%; margin:auto;" alt="">
+                                        </div>
+                                        <br>
+                                        <div style="width: 80%; margin: auto;">
+                                            <img src="images/HomePage/2.jpg" style="width: 100%; margin:auto;" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 col-xl-1" ></div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </article>
+                </article>
+
+
+            </div>
+
+
+            <div id="footer-loader"></div>
+            <script src="jsfiles/heading-loader-v4.js"></script>
+            <script src="jsfiles/footer-loader-v3.js"></script>
+        </div>
+        <script>
+            $(document).ready(function () {
+                new devsite.feedback.Widget({
+                    'product_id': '719752',
+                    'bucket': '',
+                    'context': '',
+                    'version': 'devsite-20180311-r00-rc00.default'
+                },
+                    document.querySelectorAll('.devsite-feedback-button'),
+                    'en',
+                    document.querySelector('.devsite-site-mask'),
+                    document.querySelector('.devsite-feedback-dialog'),
+                    document.querySelector('.devsite-feedback-cancel'),
+                    document.querySelectorAll('.devsite-feedback-item a:not([href])')
+                );
+            });
+        </script>
+    </div>
+    <script src="mainfile/script_foot_closure.js"></script>
+    <script src="mainfile/script_foot.js"></script>
+
+    <script>
+        (function ($) {
+
+            devsite.devsite.Init($, {
+                'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0,
+                'SITE_NAME': 'COMSYS',
+                'FULL_SITE_SEARCH_ENABLED': 1,
+                'ENABLE_CLOUDTRACK': 0,
+                'VTAGS_ENABLED': 1,
+                'HISTORY_ENABLED': 1,
+                'SIDEBAR_MINI_ENABLED': 0,
+                'VERSION_HASH': '7bb14d2951',
+                'SCRIPTSAFE_DOMAIN': 'firebase-dot-google-developers.appspot.com',
+                'ENABLE_BLOCKED_LINK_TOOLTIP': 0,
+                'ALLOWED_HOSTS': ['.android.com', '.appspot.com', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.tensorflow.org'],
+                'BLOCK_RSS_FEEDS': 0
+            },
+                '[]', 'en',
+                true, 'kv.sayanbanerjee@gmail.com', {
+                "99a6bd77935176c43993ac6fe3e23dfc": true,
+                "8de7a048f21618359bd37f5ce44be073": false,
+                "098dafe57affddc137df300142652cfd": false,
+                "8e03e230de0bd8a6fe173fdf172e8b3f": true,
+                "cb025a64a50094835616312f4774a53d": true,
+                "51470233c56fc1fde50f00b73c52b216": false,
+                "d169d485cf24243a263783dbe42029b1": true,
+                "700def1a83e356c06c0925afb05de4b0": false,
+                "6749dcb526ce9bde6993550c7d928d24": true
+            }, 'docs/database/index.html',
+                'https://firebase.google.com/?authuser=0');
+        })(jQuery);
+
+
+        devsite.localInit = function () {
+
+        };
+    </script>
+    <script src="../code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        var $els = $('.respo a, .respo header');
+        var count = $els.length;
+        var grouplength = Math.ceil(count / 3);
+        var groupNumber = 0;
+        var i = 1;
+        $('.respo').css('--count', count + '');
+        $els.each(function (j) {
+            if (i > grouplength) {
+                groupNumber++;
+                i = 1;
+            }
+            $(this).attr('data-group', groupNumber);
+            i++;
+        });
+
+        $('.respo footer button').on('click', function (e) {
+            e.preventDefault();
+            $els.each(function (j) {
+                $(this).css('--top', $(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+                $(this).css('--delay-in', j * .1 + 's');
+                $(this).css('--delay-out', (count - j) * .1 + 's');
+            });
+            $('.respo').toggleClass('closed');
+            e.stopPropagation();
+        });
+
+
+        setTimeout(function () {
+            $('.respo footer button').click();
+
+        }, 1000);
+    </script>
+    <script>
+        $('.devsite-utility-footer-language-select').each(function () {
+            $(this).change(function () {
+                $('.devsite-utility-footer-language').submit();
+            });
+        });
+    </script>
+    </div>
+
+
+</body>
+
+<!-- Mirrored from www.comsysconf.org/aboutus.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 May 2022 16:42:25 GMT -->
+
+</html>
